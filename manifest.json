@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "name": "URL Collector",
+    "description": "Save URLs from the current tab or manual input.",
+    "action": {
+        "default_title": "URL Collector",
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
