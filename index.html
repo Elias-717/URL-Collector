@@ -1,20 +1,25 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+            <title>URL Collector</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
     </head>
     <body>
         <div id="container">
-            <img src="icon.png" alt="icon" id="icon">
+            <img src="images/icon.png" alt="icon" id="icon">
             <h1>My Links</h1>
         </div>
-        <input type="text" id="input-el">
+        <input type="text" id="input-el" placeholder="Enter URL here">
         <div id="btn-div">
         <button id="input-btn">SAVE INPUT</button>
-        <button id="tab-btn">SAVE TAB</button>
         <button id="delete-btn">DELETE ALL</button>
         </div>
         <ul id="ul-el">
         </ul>
-        <script src="index.js"></script>
+        <script  type="module" src="index.js"></script>
     </body>
 </html>
