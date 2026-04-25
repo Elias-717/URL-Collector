@@ -65,12 +65,12 @@ button:hover {
 
 #delete-btn {
     background: transparent;
-    border: 1px solid #ef4444;
+    border: 1px solid #20dd0f; 
     color: #ef4444;
 }
 
 #delete-btn:hover {
-    background: #ef4444;
+    background: #9b0c0c;
     color: white;
 }
 
