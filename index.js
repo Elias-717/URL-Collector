@@ -1,31 +1,32 @@
-let myLeads = []
+let myUrls = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+const urlsFromLocalStorage = JSON.parse( localStorage.getItem("myUrls") ) 
 const tabBtn = document.getElementById("tab-btn")
 
-if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage
-    render(myLeads)
+if (urlsFromLocalStorage) {
+    myUrls = urlsFromLocalStorage
+    localStorage.setItem("myUrls", JSON.stringify(myUrls) )
+    render(myUrls)
 }
 
 tabBtn.addEventListener("click", function(){    
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads)
+        myUrls.push(tabs[0].url)
+        localStorage.setItem("myUrls", JSON.stringify(myUrls) )
+        render(myUrls)
     })
 })
 
-function render(leads) {
+function render(urls) {
     let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
+    for (let i = 0; i < urls.length; i++) {
         listItems += `
             <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                <a target='_blank' href='${urls[i]}'>
+                    ${urls[i]}
                 </a>
             </li>
         `
@@ -35,13 +36,13 @@ function render(leads) {
 
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
-    myLeads = []
-    render(myLeads)
+    myUrls = []
+    render(myUrls)
 })
 
 inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
+    myUrls.push(inputEl.value)
     inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+    localStorage.setItem("myUrls", JSON.stringify(myUrls) )
+    render(myUrls)
 })
