@@ -65,12 +65,20 @@ button:hover {
 
 #delete-btn {
     background: transparent;
+<<<<<<< HEAD
     border: 1px solid #20dd0f; 
+=======
+    border: 1px solid #ef4444;
+>>>>>>> f6165f8bad3efc83cba0b3a037ac200e94f99c6c
     color: #ef4444;
 }
 
 #delete-btn:hover {
+<<<<<<< HEAD
     background: #9b0c0c;
+=======
+    background: #ef4444;
+>>>>>>> f6165f8bad3efc83cba0b3a037ac200e94f99c6c
     color: white;
 }
 
@@ -104,8 +112,15 @@ a:hover {
 
 #btn-div {
     display: flex;
+<<<<<<< HEAD
     justify-content: space-around;
     gap: 10px;
     margin-bottom: 20px;
 }
 
+=======
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+>>>>>>> f6165f8bad3efc83cba0b3a037ac200e94f99c6c
