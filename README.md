@@ -13,6 +13,12 @@ Install (Developer Mode)
 2. Enable Developer mode (top right).
 3. Click "Load unpacked" and select this folder.
 
+<<<<<<< HEAD
+Mobile Install Note
+This version can be installed from the Chrome extension download on your phone, and it is more flexible for the mobile viewport.
+
+=======
+>>>>>>> f6165f8bad3efc83cba0b3a037ac200e94f99c6c
 Usage
 - Click the extension icon.
 - Use "SAVE TAB" or "SAVE INPUT" to add links.
